@@ -34,5 +34,24 @@ public class controlStatementsLecture {
         int theAnswer = 42;
             if (existence || theAnswer++ == 42){}
         System.out.println(theAnswer);
+
+//            int i = 1;
+//        System.out.println("The loop hasn't started yet. The value i is" + i);
+//        while(i < 10){
+//            System.out.println("Now I'm in the loop. i has not incremented yet adn its value is " + i);
+//            i++;
+//            System.out.println("I'm still in the loop. i has incremented and its value is " + i);
+//        }
+//            System.out.println("The loop has ended because the conditional has tested false. The value of i is " + i);
+        // do {
+        // System.out.println("Now I'm in the loop. i has not incremented yet adn its value is " + i);
+        // i++;
+        // System.out.println("I'm still in the loop. i has incremented and its value is " + i);
+        // } while (i < 10);
+        // System.out.println("The loop has ended because the conditional has tested false. The value of i is " + i);
+
+        for (int i = 0; i < 10; i++){
+            System.out.println(i);
+        }
     }
 }
