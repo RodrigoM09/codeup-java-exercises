@@ -16,11 +16,6 @@ public class MethodsExercises {
         int userInput = getInteger(1, 10);
         System.out.println("Your number: " + userInput);
 
-        int i, fact = 1;
-        int number= scanner.nextInt();//It is the number to calculate factorial
-        System.out.println("Input a number between 1 and 10 to find factorial: ");
-        fact = factorial(number);
-        System.out.println("Factorial of "+number+" is: "+fact);
     }
 
     public static int add(int one, int two) {
@@ -52,10 +47,21 @@ public class MethodsExercises {
         }
     }
 
-    public static int factorial(int n){
-        if (n == 0)
-            return 1;
-        else
-            return(n * factorial(n-1));
+    public static void factorial(int n){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Input a number between 1 and 10 to find factorial: ");
+        int number = scanner.nextInt();//It is the number to calculate factorial
+        long fact = 1;
+        scanner.close();
+        if (number < 0 )
+            System.out.println("Cant find factorial of negative numbers.");
+        else if (number <=1)
+        System.out.println();
+        else {
+            for( int i = number; i >=2; i--){
+                fact = fact * i;
+            }
+            System.out.println();
+        }
     }
 }
