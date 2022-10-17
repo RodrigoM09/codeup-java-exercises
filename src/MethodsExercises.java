@@ -16,6 +16,7 @@ public class MethodsExercises {
         int userInput = getInteger(1, 10);
         System.out.println("Your number: " + userInput);
 
+        System.out.println("this is your factorial: " + factorial(1,10));
     }
 
     public static int add(int one, int two) {
@@ -27,7 +28,7 @@ public class MethodsExercises {
     public static int multiplication(int one, int two){
         return one * two;
     }
-    public static int division(int one, int two){
+    public static double division(double one, double two){
         return one / two;
     }
 
@@ -40,18 +41,21 @@ public class MethodsExercises {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a number between 1 and 10: ");
         int userInput = scanner.nextInt();
-        if (userInput > min & userInput  <= max){
+        if (userInput >= min & userInput  <= max){
             return userInput;
-        }else{
-            return getInteger(min, max);
+        } else {
+            System.out.printf("You entered %d, which is out of the range %n", userInput);
         }
+        return getInteger(min, max);
     }
 
-    public static void factorial(int n){
+
+// <-----------------------------MY SOLUTION-------------------------------------------------------------->
+    public static int factorial(int min, int max){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Input a number between 1 and 10 to find factorial: ");
         int number = scanner.nextInt();//It is the number to calculate factorial
-        long fact = 1;
+        int fact = 1;
         scanner.close();
         if (number < 0 )
             System.out.println("Cant find factorial of negative numbers.");
@@ -61,7 +65,16 @@ public class MethodsExercises {
             for( int i = number; i >=2; i--){
                 fact = fact * i;
             }
-            System.out.println();
         }
+        return fact;
+    }
+
+
+    public static void rollDice(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Input number of sides on dice:");
+        byte sides = scanner.nextByte();
+        System.out.printf("Your dice have %d sides.%n", sides);
+
     }
 }
