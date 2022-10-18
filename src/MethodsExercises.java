@@ -55,7 +55,7 @@ public class MethodsExercises {
 //// <-----------------------------MY SOLUTION-------------------------------------------------------------->
 //    public static int factorial(int min, int max){
 //        Scanner scanner = new Scanner(System.in);
-//        System.out.println("Input a number between 1 and 10 to find factorial: ");
+//        System.out.println("util.Input a number between 1 and 10 to find factorial: ");
 //        int number = scanner.nextInt();//It is the number to calculate factorial
 //        int fact = 1;
 //        scanner.close();
@@ -78,7 +78,7 @@ public class MethodsExercises {
     }
     public static void rollDice(){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Input number of sides on dice:");
+        System.out.println("util.Input number of sides on dice:");
         byte numberOfsides = scanner.nextByte();
         System.out.printf("Your dice have %d sides.%n", numberOfsides);
         System.out.println("Do you want to roll? y/n");
