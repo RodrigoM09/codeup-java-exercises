@@ -1,7 +1,16 @@
-import java.util.Scanner;
+import org.w3c.dom.ls.LSOutput;
 
+import java.util.Scanner;
 public class ArraysExercises {
 
+    public static Person[] addPerson(Person[] persons, Person person) {
+        Person[] newPersonsArray = new Person[persons.length + 1];
+        for(int i =0; i < persons.length; i++){
+            newPersonsArray[i] = persons[i];
+        }
+        newPersonsArray[newPersonsArray.length - 1] = person;
+        return newPersonsArray;
+    }
     public static void main(String[] args) {
            Person john = new Person("John");
            Person rodrigo = new Person ("Rodrigo");
@@ -15,14 +24,11 @@ public class ArraysExercises {
             for(Person person : newArray){
                 System.out.println(person.getName());
             }
-        System.out.println(newArray);
-    }
-    public static Person[] addPerson(Person[] persons, Person person) {
-        Person[] newPersonsArray = new Person[persons.length + 1];
-        for(int i =0; i < persons.length; i++){
-            newPersonsArray[i] = persons[i];
-        }
-        newPersonsArray[newPersonsArray.length - 1] = person;
-        return newPersonsArray;
+                System.out.println(newArray);
+
+
+        ServerNameGenerator server1 = new ServerNameGenerator();
+        System.out.println("Here is your server name:");
+        System.out.println(server1.getName());
         }
     }
