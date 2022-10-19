@@ -18,7 +18,7 @@ public class Input {
     }
 
     public boolean yesNo(){
-        System.out.println("question");
+        System.out.println("Yay or Nay?");
         userInput = scanner.nextLine();
         System.out.println(userInput);
         if (userInput.equals("y")) {
@@ -50,6 +50,11 @@ public class Input {
         }
         return getInt(min, max);
     }
+    public double getInt(){
+        System.out.println("Enter your number: ");
+        return scanner.nextInt();
+    }
+
 
     public double getDbl(double min, double max){
         System.out.println("Enter a number between " + min + " and " + max);
@@ -61,6 +66,11 @@ public class Input {
             System.out.printf("You entered %d, which is out of the range %n", numInput);
         }
         return getDbl(min, max);
+    }
+
+    public double getDbl(String prompt){
+        System.out.println(prompt);
+        return scanner.nextDouble();
     }
 
     public Input(){

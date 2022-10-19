@@ -16,7 +16,10 @@ public class Person {
         System.out.printf("Persons name is %s", name);
     }
 
-    public Person(){
+    //Create a blank constructor
+    public Person(){}
 
+    public Person(String name){
+        this.name = name;
     }
 }
