@@ -1,7 +1,7 @@
 package animals;
 public class BirdTest {
     public static void main(String[] args) {
-//        Bird crow = new Bird();
+//        Bird crow = new crow();
 //        crow.setName("Dr. Crow");
 //        System.out.print(crow.getName() + " goes ");
 //        crow.makeNoise();
@@ -10,6 +10,7 @@ public class BirdTest {
         Parrot Polly = new Parrot();
         Polly.makeNoise();
         Polly.echo("I can mimic anything you want me to say");
+        Polly.beCute();
 
     }
 }
