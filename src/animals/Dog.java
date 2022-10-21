@@ -1,4 +1,8 @@
+package animals;
 public class Dog {
+    public String name;
+    public String sound;
+
     public static String bark(){
 //        System.out.println("Woof Woof!");
         return "Woof Woof";
@@ -12,7 +16,9 @@ public class Dog {
           System.out.println("Woof Woof!");
       }
     }
-
+    public void makeNoise(){
+        System.out.printf("%s goes %s%n",name, Quote.RandomQuote());
+    }
     public static void bark(int weight, String name ){
         System.out.printf("%s goes ", name);
         bark(weight);
@@ -27,7 +33,6 @@ public class Dog {
 
     public static void main(String[] args) {
         System.out.println(bark());
-
 
         //bark();
 //        bark(15);

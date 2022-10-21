@@ -1,5 +1,7 @@
+package animals;
+
 public class Quote {
-    // Create a Quote class with a RandomQuote method. The method should generate a random number from 1 to 4.
+    // Create a animals.Quote class with a RandomQuote method. The method should generate a random number from 1 to 4.
     public static String RandomQuote(){
         int randomNumber = (int) (Math.random() * 4) + 1;
         switch(randomNumber) {

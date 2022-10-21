@@ -1,5 +1,7 @@
+import animals.Quote;
+
 public class Perro {
-    //Create a class for your favorite type of animal. The class should be named for your animal - Cat, Dog, Parrot etc.
+    //Create a class for your favorite type of animal. The class should be named for your animal - Cat, animals.Dog, Parrot etc.
 
 
     // It should have two instance variables - name and sound - and one method - makeNoise().

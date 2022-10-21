@@ -1,5 +1,5 @@
 package movies;
-import weywot.java.util.Input;
+import util.Input;
 public class moviesApplication {
     public static void getAllMoviesFromCategories(String category, Movie[] movies){
         for(Movie movie : movies){
