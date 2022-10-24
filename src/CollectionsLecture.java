@@ -57,17 +57,28 @@ public class CollectionsLecture {
 //      .SORT WILL SORT NUMBERS FROM LEAST TO GREATEST
         ArrayList<Integer> myNumbers = new ArrayList<>(List.of(1,7,9,3,-7,-3));
         System.out.println(myNumbers);
+//        COLLECTIONS.SORT TO SORT ARRAYLISTS THAT CONTAIN NUMBERS OR STRINGS
+//        THEY WILL BE SORTED IN ASCENDING ORDER......
         Collections.sort(myNumbers);
         System.out.println(myNumbers);
 //      .SORT WILL SORT STRINGS ALPHABETICALLY
         ArrayList<String> randomWords = new ArrayList<>(List.of("Version", "Suntan", "Bond", "Defeat", "Later", "Rate"));
         System.out.println(randomWords);
         Collections.sort(randomWords);
+
+//        THE LIST INTERFACE CONTAINS A DEFAULT METHOD CALLED .SORT()
+//        SO YOU CAN CALL .SORT ON ANY ARRAYLIST. IT TAKES A COMPARATOR AS ITS ARGUMENT
+//        YOU CAN PASS IT COLLECTIONS.REVERSE ORDER TO SORT AN ARRAYLIST OF STRINGS
+//        OR NUMBERS IN REVERSE.....
         System.out.println(randomWords);
 //      TO SORT MONSTER ARRAY BY PROPERTIES......
         monsterArrayList.sort(Comparator.comparing(Monster::getHitPoints));
         System.out.println(monsterArrayList);
 
-//
+
+
+//      TO USE THE COMPARE METHOD THAT WE WROTE IN THE MONSTER CLASS
+        monsterArrayList.sort(new Monster());
+        System.out.println(monsterArrayList);
     } //END OF MAIN METHOD
 } //END OF THE COLLECTIONS-LECTURE CLASS

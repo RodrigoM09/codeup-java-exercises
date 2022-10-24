@@ -1,4 +1,6 @@
-public class Monster {
+import java.util.Comparator;
+
+public class Monster implements Comparator<Monster> {
 
     private String name;
     private int armorClass;
@@ -36,9 +38,16 @@ public class Monster {
         this.damage = damage;
     }
 
+//  TURNS NAME INTO A STRING...WITHOUT WOULD DISPLAY HASHCODE
     public String toString(){
         return name;
     }
+
+//  TO CREATE A CUSTOM COMPARISON METHOD, WE IMPLEMENT COMPARABLE<OBJECTCLASSNAME>
+//  IN THE OBJECT CLASS... USE THIS SYNTAX
+    public int compare(Monster m1, Monster m2){
+        return Integer.compare(m2.getHitPoints(), m1.getHitPoints());
+        }
 
     public Monster(){}
 
