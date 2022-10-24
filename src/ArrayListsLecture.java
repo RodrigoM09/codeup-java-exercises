@@ -3,7 +3,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-public class CollectionsLecture {
+public class ArrayListsLecture {
     public static void main(String[] args) {
         // ARRAYLISTS ARE CHANGEABLE WHEREAS ARRAYS ARE NOT.
         // USE ARRAYLISTS WHEN YOU KNOW THE ARRAY IS GOING TO BE CHANGED.
