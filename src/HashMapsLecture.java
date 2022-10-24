@@ -82,7 +82,13 @@ public class HashMapsLecture {
                     monster, monster.getHitPoints(),monster.getArmorClass(), monster.getDamage());
         });
 
-
+//     USE THE COLLECTION TO ARRAY METHOD TO CONVERT A COLLECTION OF HASHMAP VALUES INTO AN ARRAY OF OBJECTS.
+//     EACH VALUE IN A HASHMAP IS AN OBJECT, USING .VALUES().TOARRAY() WE CAN CREATE AN ARRAY OF OBJECTS
+        Object[] monstersArray = monsterHashMap.values().toArray();
+        for(Object monster : monstersArray){
+            int hitPoints = ((Monster) monster).getHitPoints();
+            System.out.println(hitPoints);
+        }
 
 
     }// END OF MAIN METHOD
