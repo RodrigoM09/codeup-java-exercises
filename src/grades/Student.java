@@ -1,37 +1,53 @@
 package grades;
 
 import java.util.ArrayList;
+import java.util.List;
+
 public class Student {
     private String name;
-    private Double grade;
-    ArrayList<Integer> gradesArrayList = new ArrayList<>();
+    private ArrayList<Integer> grades;
 
-    // returns the student's name
+    // SETTER
+    public void setName(String name){
+        this.name = name;
+    }
+    public void setGrades(ArrayList<Integer> grades) {
+        this.grades = grades;
+    }
+
+    //GETTER
+
     public String getName() {
         return name;
     }
-    public Double getGrade(){
-        return grade;
+
+    public ArrayList<Integer> getGrades() {
+        return grades;
     }
 
     // adds the given grade to the grades property
-    public double addGrade(double grade) {
-        return grade;
+    public void addGrade(int grade) {
+        this.grades.addAll(new ArrayList<>(List.of(grade)));
     }
 
-    // returns the average of the students grades
+    // RETURN AVERAGE OF THE STUDENTS GRADES.....
     public double getGradeAverage() {
-        for (double i = 0; i < gradesArrayList.size(); i++){
-            System.out.println(gradesArrayList.get((int) i));
+        int total = 0;
+        for(int i = 0; i < grades.size(); i++){
+            total += grades.get(i);
         }
-        return 0;
+        return (double) total / grades.size();
     }
+    // Default Constructor
+    public Student(){};
 
-    public Student(String name, double grade) {
+    // Custom Constructor
+    public Student(String name) {
         this.name = name;
-        this.grade = grade;
+        this.grades = new ArrayList<>();
     }
     public String toString(){
         return name;
     }
-}
+
+} // end of student class
