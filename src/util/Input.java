@@ -50,9 +50,10 @@ public class Input {
         }
         return getInt(min, max);
     }
-    public double getInt(){
+    public int getInt(){
         System.out.println("Enter your number: ");
-        return scanner.nextInt();
+        Integer.valueOf(getString());
+        return Integer.valueOf(getString());
     }
 
 
@@ -70,7 +71,8 @@ public class Input {
 
     public double getDbl(String prompt){
         System.out.println(prompt);
-        return scanner.nextDouble();
+        Double.valueOf(getString());
+        return Double.valueOf(getString());
     }
 
     public Input(){
