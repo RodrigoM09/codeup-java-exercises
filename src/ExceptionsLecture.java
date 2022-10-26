@@ -21,6 +21,24 @@ public class ExceptionsLecture {
 //        throw SomeException("Exception message here");
 //        throw new RuntimeException("You did something wrong. Sorry...");
 
+
+//        TRY CATCH API FAILURE EXAMPLE----------------------------------------------->
+//        try{
+//            if(/* QueryAPI() == 500_Error */){
+//                throw new Exception("API is down....");
+//
+//            } else{
+//                // queryAPI() and do something with the information
+//            }
+//        } catch (Exception e){
+//            // write stacktrace to error file on the server
+//            // QueryBackUpAPI() (DarkSkyAPI)and do things with information
+//            e.printStackTrace();
+//        }
+//        END OF TRY CATCH API FAILURE EXAMPLE ---------------------------------------->
+
+//        System.out.println("Will this run??");
+
         // unchecked exceptions
 
 //        int x = 1;
@@ -43,13 +61,20 @@ public class ExceptionsLecture {
 //        } catch (Exception e) {
 //            e.printStackTrace();
 //        } finally {
+//            System.out.println("Closing Resource");
 //            sc.close();
 //        }
 
-        // custom exceptions
+//        CUSTOM EXCEPTIONS---------------------------------------->
 
-//        soutName("Justin");
-//        soutName("Bob");
+        try{
+//            soutName("Justin");
+            soutName("Bob");
+        } catch(NameIsBobException e) {
+            e.printStackTrace();
+        }
+
+
 
     }
 
@@ -82,8 +107,16 @@ public class ExceptionsLecture {
 //        // we need to handle the possible exception thrown by the connectToDatabase method
 //        // we can either handle the exception with a try-catch block in this method or bump up
 //        // the responsibility of adding the try-catch block to the main method using the throws keyword
+//    try {
 //        connectToDatabase(); // what happens if the random number is 0 (can't connect to the database?)
+//    } catch(
+//    SQLException e)
+//
+//    {
+//        e.printStackTrace();
 //    }
+//
+//}
 
     public static void soutName(String name) throws NameIsBobException {
         if (name.equalsIgnoreCase("bob")) {
