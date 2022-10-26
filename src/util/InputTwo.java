@@ -48,6 +48,7 @@ public class InputTwo {
     public static void main(String[] args) {
         InputTwo input = new InputTwo();
         int num = input.getInt();
+        double num2 = input.getDouble();
     }
 
 
