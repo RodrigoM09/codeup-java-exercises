@@ -1,4 +1,7 @@
 package PracticeJavaAssesment;
+
+import java.util.ArrayList;
+
 /** 6. Create a PetDog class that inherits from Pet. */
 public class PetDog extends Pet implements Companion{
 
@@ -18,8 +21,14 @@ public class PetDog extends Pet implements Companion{
         return trained;
     }
 
-
-
-
-    /** 11. Create a PetDogTest class, instantiate a PetDog, and verify that the snuggle method works correctly. */
+    /**  The implementation of the snuggle method on the PetDog class should return "name wants to snuggle"
+     , where name is the inherited instance property. */
+    public String snuggle(){
+        return getName() + " wants to snuggle";
+    }
+    public static void allSnuggle(ArrayList<PetDog> petDogs){
+        for(PetDog petDog : petDogs){
+            System.out.println(petDog.snuggle());
+        }
+    }
 }

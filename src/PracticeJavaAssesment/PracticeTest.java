@@ -8,6 +8,7 @@ public class PracticeTest {
         System.out.println(Practice.average(array));
 
         System.out.println(new PetDog("hello","dog",true));
+
     }
 
 }

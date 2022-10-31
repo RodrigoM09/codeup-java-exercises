@@ -1,10 +1,17 @@
 package PracticeJavaAssesment;
 
+import java.util.ArrayList;
+
 public class Practice {
     /**
      * 1. Create a class called Practice with a main method.
      */
     public static void main(String[] args) {
+        System.out.println(subtractTen(20));
+        double[] result ={5,10,15};
+        System.out.println(average(result));
+        for(int number : multiplyAll(5, new ArrayList<>()))
+            System.out.println(number);
     }
 
     /**
@@ -27,5 +34,14 @@ public class Practice {
         return result;
     }
 
+    public static ArrayList<Integer> multiplyAll(int multiplier, ArrayList<Integer> numbers) {
+        ArrayList<Integer> result = new ArrayList<>();
+        for (Integer number : numbers) {
+            result.add(number * multiplier);
+        }
+        return result;
+    }
+
 }
+
 
