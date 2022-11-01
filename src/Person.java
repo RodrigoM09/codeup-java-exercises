@@ -1,7 +1,7 @@
 public class Person {
     private String name;
     public String getName(){
-    //TODO: return the person's name
+    //TODO: return the quiz.person's name
         return name;
     }
 
@@ -15,7 +15,7 @@ public class Person {
     }
 
     public void sayHello(){
-     //TODO: print a message to the console using the person's name
+     //TODO: print a message to the console using the quiz.person's name
         System.out.printf("Persons name is %s", name);
     }
 

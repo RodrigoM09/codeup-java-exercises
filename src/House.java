@@ -1,3 +1,4 @@
+
 public class House {
     private Person owner;
 

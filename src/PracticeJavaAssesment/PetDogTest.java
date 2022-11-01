@@ -12,6 +12,6 @@ public class PetDogTest {
         System.out.println(petDog.snuggle());
         ArrayList<PetDog> petDogs = new ArrayList<>(List.of(petDog,petDog1,petDog2));
         PetDog.allSnuggle(petDogs);
+        System.out.println(petDogs);
     }
 }
-
